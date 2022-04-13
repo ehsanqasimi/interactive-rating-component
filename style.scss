@@ -1,0 +1,137 @@
+$White: hsl(0, 0%, 100%);
+$LightGrey: hsl(217, 12%, 63%);
+$MediumGrey: hsl(216, 12%, 54%);
+$Orange: hsl(25, 97%, 53%);
+$DarkBlue: hsl(213, 19%, 18%);
+$VeryDarkBlue: hsl(216, 12%, 8%);
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+$font-family:'Overpass', sans-serif;
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $VeryDarkBlue;
+    font-family: $font-family;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    user-select: none;
+    overflow: hidden;
+}
+.main-container{
+    display: flex;
+    .container{
+        border: 2px solid red;
+        padding: 20px;
+        background-color: $DarkBlue;
+        width: 350px;
+        height: 350px;
+        border-radius: 20px;
+        margin-left: 400px;
+        .star{
+            background-color: #262f38;
+            padding: 10px;
+            border-radius: 50%;
+
+        }
+        p{
+            padding-bottom: 20px;
+            font-size: 13px;
+            color: $LightGrey;
+        }
+        span{
+            padding: 10px 15px;
+            background-color: #262f38;
+            border-radius: 100px;
+            color: $LightGrey;
+            width: 40px;
+            justify-content: space-between;
+
+
+            cursor: pointer;
+            &:hover{
+                background-color: $Orange;
+                color: white;
+            }
+        }
+        .selected{
+            background-color: $LightGrey;
+            color: white;
+        }
+        .span1, .span2, .span3, .span4{
+            margin-right: 19px;
+        }
+        // .span2{
+        //     margin-right: 23.8px;
+        // }
+        // .span3{
+        //     margin-right: 23.8px;
+        // }
+        // .span4{
+        //     margin-right: 23.8px;
+        // }
+        .button{
+            width: 100%;
+            background-color: $Orange;
+            border-radius: 20px;
+            padding: 10px 0;
+            color: $White;
+            border: none;
+            margin-top: 40px;
+            cursor: pointer;
+
+        }
+        .button:hover{
+            background-color: white;
+            color: $Orange;
+        }
+    }
+}
+
+.thank-you{
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    background-color: $DarkBlue;
+    opacity: 0;
+    //width: 0;
+    text-align: center;
+    transform: translateY(100%);
+    img{
+        margin: 20px 0;
+    }
+    .rate-result{
+        background-color: hsl(214, 14%, 30%);
+        padding: 5px 10px;
+        width: max-content;
+        border-radius: 20px;
+        color: $Orange;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+    }
+    h1{
+        margin: 20px 0;
+    }
+}
+.show{
+    .container{
+        display: none;
+    }
+    .thank-you{
+        opacity: 1;
+        //width: 350px;
+        transition: all 1s ease;
+        transform: translateY(0);
+    }
+}
