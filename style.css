@@ -35,7 +35,6 @@ body {
 }
 
 .main-container .container {
-  border: 2px solid red;
   padding: 20px;
   background-color: #252d37;
   width: 350px;
